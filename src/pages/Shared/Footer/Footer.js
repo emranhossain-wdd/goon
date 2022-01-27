@@ -20,7 +20,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="border-t-2 border-gray-500 font-semibold text-gray-800 py-2">
-                    &copy; <span className="text-black">GO ON</span> .All rights reserve
+                    &copy; {new Date().getFullYear()} <span className="text-black">GO ON</span> . All rights reserve
                 </div>
             </div>
         </div>
