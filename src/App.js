@@ -14,6 +14,7 @@ import ManageOrders from './pages/Dashboard/ManageOrders/ManageOrders';
 import ManageProducts from './pages/Dashboard/ManageProducts/ManageProducts';
 import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
 import AdminRoute from './pages/SignIN/AdminRoute/AdminRoute';
+import Blog from './pages/Home/Blog/Blog';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/blog/:id" element={<Blog />} />
             <Route path="/dashboard" element={<PrivateRoute><DashboardDrawer /></PrivateRoute>} >
               <Route path='/dashboard/myblogs' element={<MyBlogs />} />
               <Route path={`dashboard/payment`} element={<Payment />} />
