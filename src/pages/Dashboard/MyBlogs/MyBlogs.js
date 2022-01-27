@@ -8,14 +8,14 @@ const MyBlogs = () => {
     const [productRemoved, setProductRemoved] = useState(false);
 
     useEffect(() => {
-        fetch(`https://quiet-fjord-11684.herokuapp.com/myOrder?email=${user?.email}`)
+        fetch(`https://calm-citadel-62315.herokuapp.com/myBlogs?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyBlogs(data))
     }, [user.email])
 
     const handleOrderCancel = id => {
         if (window.confirm('Cancel order. Do you want to cancel this order?')) {
-            fetch(`https://quiet-fjord-11684.herokuapp.com/order/${id}`, {
+            fetch(`https://calm-citadel-62315.herokuapp.com/blog/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -32,7 +32,7 @@ const MyBlogs = () => {
 
     return (
         <div>
-            <h1 className="text-indigo-600 text-3xl font-bold">My Orders</h1>
+            <h1 className="text-yellow-600 text-3xl font-bold">My published blogs</h1>
             {
                 productRemoved && <span className="bg-red-50 text-red-500 rounded-md flex justify-between tracking-wider p-1"><span className="flex"><ExclamationIcon className="h-6 w-6 mr-2" aria-hidden="true" />Order canceled</span><XIcon onClick={() => setProductRemoved(!productRemoved)} className="h-6 w-6" aria-hidden="true" /></span>
             }
@@ -50,7 +50,7 @@ const MyBlogs = () => {
                             }
                         </div>
                         <div className="text-left my-6">
-                            <h3 className="text-indigo-600 font-bold text-xl">{myOrder?.productName || myOrder?.serviceName}</h3>
+                            <h3 className="text-yellow-600 font-bold text-xl">{myOrder?.productName || myOrder?.serviceName}</h3>
                             <p className="flex">Price : {myOrder?.price || "Custom Order"}&nbsp;
                                 <CurrencyDollarIcon className="h-6 w-6" aria-hidden="true" />
                             </p>

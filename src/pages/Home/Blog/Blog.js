@@ -1,6 +1,7 @@
 import { LocationMarkerIcon } from '@heroicons/react/outline';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 
 const Blog = () => {
@@ -28,12 +29,13 @@ const Blog = () => {
                         </svg></p>
                     </div>
                     <p className='text-white text-lg tracking-wider pb-6'>{blog?.description}</p>
-                    <div className='text-yellow-300 tracking-wider space-x-6'>
+                    <div className='text-yellow-300 tracking-wider pb-4 space-x-6'>
                         <i>Published time {blog?.time}</i>
                         <i>Published date {blog?.date}</i>
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

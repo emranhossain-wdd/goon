@@ -8,10 +8,7 @@ import NewBlog from './pages/Dashboard/NewBlog/NewBlog';
 import PrivateRoute from './pages/SignIN/PrivateRoute/PrivateRoute';
 import DashboardDrawer from './pages/Dashboard/DashboardDrawer/DashboardDrawer';
 import MyBlogs from './pages/Dashboard/MyBlogs/MyBlogs';
-import Payment from './pages/Dashboard/Payment/Payment';
-import Review from './pages/Dashboard/Review/Review';
-import ManageOrders from './pages/Dashboard/ManageOrders/ManageOrders';
-import ManageProducts from './pages/Dashboard/ManageProducts/ManageProducts';
+import AllBlogs from './pages/Dashboard/AllBlogs/AllBlogs';
 import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
 import AdminRoute from './pages/SignIN/AdminRoute/AdminRoute';
 import Blog from './pages/Home/Blog/Blog';
@@ -26,10 +23,7 @@ function App() {
             <Route path="/blog/:id" element={<Blog />} />
             <Route path="/dashboard" element={<PrivateRoute><DashboardDrawer /></PrivateRoute>} >
               <Route path='/dashboard/myblogs' element={<MyBlogs />} />
-              <Route path={`dashboard/payment`} element={<Payment />} />
-              <Route path={`/dashboard/review`} element={<Review />} />
-              <Route path={`dashboard/manage-orders`} element={<ManageOrders />} />
-              <Route path={`dashboard/manage-products`} element={<ManageProducts />} />
+              <Route path={`/dashboard/allblogs`} element={<AdminRoute><AllBlogs /></AdminRoute>} />
               <Route path={`/dashboard/newblog`} element={<NewBlog />} />
               <Route path={`/dashboard/make-admin`} element={<AdminRoute> <MakeAdmin /></AdminRoute>} />
             </Route>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { AppBar, Box, CssBaseline, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
-import { MenuIcon, PlusSmIcon, HomeIcon, DocumentTextIcon, PencilIcon, CreditCardIcon, AnnotationIcon, LogoutIcon, UserAddIcon } from '@heroicons/react/outline';
+import { MenuIcon, PlusSmIcon, HomeIcon, AnnotationIcon, LogoutIcon, UserAddIcon } from '@heroicons/react/outline';
 import { Link, useNavigate, Outlet } from "react-router-dom";
 import useAuth from '../../../Hooks/useAuth';
 
@@ -53,27 +53,6 @@ function DashboardDrawer(props) {
                     </ListItem>
                 </Link>
                 {
-                    !admin &&
-                    <div>
-                        <Link to={`dashboard/payment`}>
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <CreditCardIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
-                                </ListItemIcon>
-                                <ListItemText primary="Payment" />
-                            </ListItem>
-                        </Link>
-                        <Link to={`/dashboard/review`}>
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <AnnotationIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
-                                </ListItemIcon>
-                                <ListItemText primary="Review" />
-                            </ListItem>
-                        </Link>
-                    </div>
-                }
-                {
                     admin &&
                     <div>
                         <Link to='/dashboard/allblogs'>
@@ -82,22 +61,6 @@ function DashboardDrawer(props) {
                                     <AnnotationIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
                                 </ListItemIcon>
                                 <ListItemText primary="All Blogs" />
-                            </ListItem>
-                        </Link>
-                        <Link to={`/dashboard/manage-orders`}>
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <DocumentTextIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
-                                </ListItemIcon>
-                                <ListItemText primary="Manage orders" />
-                            </ListItem>
-                        </Link>
-                        <Link to={`/dashboard/manage-products`}>
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <PencilIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
-                                </ListItemIcon>
-                                <ListItemText primary="Manage Products" />
                             </ListItem>
                         </Link>
                         <Link to={`/dashboard/make-admin`}>
