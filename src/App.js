@@ -12,6 +12,7 @@ import AllBlogs from './pages/Dashboard/AllBlogs/AllBlogs';
 import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
 import AdminRoute from './pages/SignIN/AdminRoute/AdminRoute';
 import Blog from './pages/Home/Blog/Blog';
+import Compare from './pages/Compare/Compare';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog/:id" element={<Blog />} />
+            <Route path="/compare" element={<Compare />} />
             <Route path="/dashboard" element={<PrivateRoute><DashboardDrawer /></PrivateRoute>} >
               <Route path='/dashboard/myblogs' element={<MyBlogs />} />
               <Route path={`/dashboard/allblogs`} element={<AdminRoute><AllBlogs /></AdminRoute>} />

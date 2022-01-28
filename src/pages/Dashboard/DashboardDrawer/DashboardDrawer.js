@@ -103,7 +103,7 @@ function DashboardDrawer(props) {
                         onClick={handleDrawerToggle}
                         sx={{ mr: 2, display: { sm: 'none' } }}
                     >
-                        <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                        <MenuIcon className="h-6 w-6 text-yellow-500" aria-hidden="true" />
                     </IconButton>
                     <Typography className="text-gray-600" variant="h5" noWrap component="div">
                         <p className="font-bold">Hello, {user?.displayName}</p>

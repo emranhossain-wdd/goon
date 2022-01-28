@@ -31,7 +31,7 @@ const Blogs = () => {
     return (
         <div className='bg-gray-800'>
             <div className='flex text-center'>
-                <div className='grid grid-cols-2 w-9/12 mx-auto space-x-4'>
+                <div className='sm:grid grid-cols-2 w-9/12 mx-auto space-x-4'>
                     {
                         blogs.map(blog => <div
                             key={blog._id}
@@ -41,7 +41,8 @@ const Blogs = () => {
                             <div className='text-left'>
                                 <h2 className='text-2xl text-white font-bold'>{blog?.blogTitle}</h2>
                                 <p className='text-gray-300'>{blog?.description.slice(0, 60)}</p>
-                                <Link to={`blog/${blog?._id}`}><button className='bg-white font-semibold px-2 rounded mt-3'>Details</button></Link>
+                                <Link to={`blog/${blog?._id}`}><button className='bg-white font-semibold px-2 mr-4 rounded mt-3'>Details</button></Link>
+                                <button className='bg-white font-semibold px-2 rounded mt-3'>Add to compare</button>
                             </div>
                         </div>)
                     }

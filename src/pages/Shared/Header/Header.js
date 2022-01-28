@@ -9,7 +9,6 @@ import {
 } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-// import logo1 from '../../../images/Go_on_Logo.svg'
 
 const Header = () => {
     const { user, logOut } = useAuth();
@@ -40,6 +39,9 @@ const Header = () => {
                         <Popover.Group as="nav" className="hidden md:flex space-x-10 items-center">
                             <Link to="/dashboard/newblog" className="text-base font-medium text-white hover:text-gray-300">
                                 New blog
+                            </Link>
+                            <Link to="/compare" className="text-base font-medium text-white hover:text-gray-300">
+                                Compare
                             </Link>
 
                             {user?.email && <Popover className="relative">
@@ -118,14 +120,14 @@ const Header = () => {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                    <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+                    <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-10">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                             <div className="pt-5 pb-6 px-5">
                                 <div className="flex items-center justify-between">
                                     <div>
                                         <img
                                             className="h-8 w-auto"
-                                            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/archive/e/ec/20140815011948%21Go_on_Logo.svg"
                                             alt="Workflow"
                                         />
                                     </div>
@@ -140,8 +142,11 @@ const Header = () => {
                             </div>
                             <div className="py-6 px-5 space-y-6">
                                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                                    <Link to="/explore" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                                        Explore
+                                    <Link to="/dashboard/newblog" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                        New blog
+                                    </Link>
+                                    <Link to="/compare" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                        Compare
                                     </Link>
                                 </div>
                                 {/* mobile menu bottom */}

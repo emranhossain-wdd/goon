@@ -18,10 +18,9 @@ const SignUp = () => {
                 <div className="flex items-center justify-center">
                     <img
                         className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        src="https://upload.wikimedia.org/wikipedia/commons/archive/e/ec/20140815011948%21Go_on_Logo.svg"
                         alt=""
-                    />&nbsp;
-                    <h3 className="font-bold text-indigo-500 text-xl">BURFORD WOODCRAFT</h3>
+                    />
                 </div>
             </Link>
             <h2 className="text-2xl pt-4 font-bold text-gray-600">Signup Here</h2>

@@ -94,7 +94,7 @@ const NewBlog = () => {
                     errors.category && <span className="bg-yellow-50 text-yellow-500 rounded-md">This field is required</span>
                 }
 
-                <div className='flex justify-between'>
+                <div className='lg:flex space-y-4 lg:space-y-4 justify-between'>
                     <input
                         className="ring-2 ring-yellow-600 rounded-md p-2"
                         type="text"
